@@ -5,10 +5,27 @@
         fill="white" />
     </svg>
   </a>
-  <a href="" class="nav-item"></a>
-  <a href="" class="nav-item"></a>
-  <a href="" class="nav-item"></a>
-  <a href="" class="nav-item"></a>
-  <a href="" class="nav-item"></a>
-  <a href="" class="nav-item"></a>
+  <div class="">
+    <a href="/" {% if page.url=="/" %}class="active nav-item flex-align-items-center text-center" {% else %} class="nav-item flex-align-items-center text-center"
+      {% endif %}><svg width="17" class="nav-icon" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 6.6L8.2 1L15.4 6.6V15.4C15.4 15.8243 15.2314 16.2313 14.9314 16.5314C14.6313 16.8314 14.2243 17 13.8 17H2.6C2.17565 17 1.76869 16.8314 1.46863 16.5314C1.16857 16.2313 1 15.8243 1 15.4V6.6Z"
+          stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5.80005 17V9H10.6V17" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </a>
+    <a href="/pullrequests" {% if page.url=="/pullrequests.html" %}class="active nav-item" {% else %} class="nav-item"
+      {%endif %}></a>
+    <a href="/issues" {% if page.url=="/issues.html" %}class="active nav-item" {% else %} class="nav-item" {%endif %}></a>
+    <a href="/chat" {% if page.url=="/chat.html" %}class="active nav-item" {% else %} class="nav-item" {%endif %}></a>
+    <a href="/projects" {% if page.url=="/projects.html" %}class="active nav-item" {% else %} class="nav-item" {%endif
+      %}></a>
+    <a href="/teams" {% if page.url=="/team.html" %}class="active nav-item" {% else %} class="nav-item" {%endif %}></a>
+    <a href="/integration" {% if page.url=="/integration.html" %}class="active nav-item" {% else %} class="nav-item"
+      {%endif %}></a>
+  </div>
+  <div class="explore">
+    <a href="/explore" {% if page.url=="/explore.html" %}class="active nav-item" {% else %} class="nav-item" {%endif %}></a>
+    <a href="/marketplace" {% if page.url=="/marketplace.html" %}class="active nav-item" {% else %} class="nav-item"
+      {%endif %}></a>
+  </div>
 </div>

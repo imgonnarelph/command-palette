@@ -1,5 +1,17 @@
-// Display
+.text-center {
+  text-align: center
+}
+
+// Flexbox
 
 .d-flex {
   display: flex;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
+}
+
+.flex-align-items-center {
+  align-items: center;
 }
