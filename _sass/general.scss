@@ -47,6 +47,17 @@ html, body {
     }
   }
 
+  .add-app {
+    margin-top: 24px;
+    display: block;
+
+    &:hover {
+      svg path {
+        stroke: $white-color;
+      }
+    }
+  }
+
   .explore {
     bottom: 0;
     position: absolute;
