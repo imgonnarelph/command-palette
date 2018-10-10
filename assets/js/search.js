@@ -1,6 +1,11 @@
-const searchInput = document.querySelector('.js-search-input');
-const commands = []
+function ready() {
+  const searchInput = document.querySelector('.js-search-input');
+  const commandPallet = document.querySelector('.js-command-pallet');
+  const commands = []
 
-searchInput.onClick = () => {
-  console.log("Is this working??")
+  searchInput.onfocus = () => {
+    commandPallet.classList.toggle('active');
+  }  
 }
+
+document.addEventListener('DOMContentLoaded', ready);
