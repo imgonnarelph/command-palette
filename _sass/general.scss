@@ -21,6 +21,7 @@ html, body {
     justify-content: center;
     align-items: center;
     margin: 10px 20px;
+    position: relative;
     width: 44px;
     height: 44px;
     background: #272A2D;
@@ -47,6 +48,17 @@ html, body {
 
     .nav-icon path {
       stroke: #798692;
+    }
+
+    .notification {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #0366D6;
+      border: 2px solid #16181A;
+      position: absolute;
+      top: -4px;
+      right: -4px;
     }
   }
 
