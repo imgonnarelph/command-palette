@@ -82,6 +82,16 @@ html, body {
   }
 }
 
+auto-complete[open]:before {
+  content: ' ';
+  background: red;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .topbar {
   background: #16181A;
   border-bottom: 1px solid #000;
@@ -92,7 +102,6 @@ html, body {
   }
 
   .command-pallet {
-    display: none;
     position: absolute;
     width: 100%;
     overflow: scroll;
@@ -101,9 +110,13 @@ html, body {
     border: 1px solid #000;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+   
+    [aria-selected=true] {
+      color: red;
+    }
 
-    &.active {
-      display: block;
+    a {
+      color: gray;
     }
   }
 
@@ -117,6 +130,11 @@ html, body {
     font-size: 14px;
     font-family: 'Space Mono', monospace;
     box-sizing: border-box;
+    position: relative;
+
+    &:focus + .command-pallet {
+      display: block;
+    }
 
     &:hover {
       cursor: pointer;

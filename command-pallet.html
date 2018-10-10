@@ -1,0 +1,77 @@
+---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+commands:
+  - key: Activity
+    value: Recent
+  - key: Issues
+    value: Create new
+  - key: Issues
+    value: Opened by me
+  - key: Issues
+    value: Assigned to me
+  - key: Issues
+    value: Recently closed
+  - key: Issues
+    value: Created by
+  - key: Pull Requests
+    value: Create new
+    url: /pullrequests
+  - key: Pull Requests
+    value: Opened by me
+  - key: Pull Requests
+    value: Approved
+  - key: Pull Requests
+    value: Changes requested
+  - key: Pull Requests
+    value: Failing
+  - key: Pull Requests
+    value: Create by
+  - key: Pull Requests
+    value: Review requested 
+  - key: Review Requests
+    value: Recent
+  - key: Review Requests
+    value: Still waiting
+  - key: Review Requests
+    value: Requested
+  - key: Review Requests
+    value: 
+  - key: Jump to
+    value: Team
+  - key: Jump to
+    value: User
+  - key: Search
+    value: 
+  - key: File
+    value: 
+  - key: User
+    value: 
+  - key: Marketplace
+    value: New
+  - key: Marketplace
+    value: Categories
+  - key: Marketplace
+    value: 
+  - key: Topic
+    value: 
+  - key: Notifications
+    value: All recent
+  - key: Notifications
+    value: Direct mention
+  - key: Notifications
+    value: Review request
+  - key: Notifications
+    value: Team mention
+  - key: Notifications
+    value: 
+  - key: Functions
+    value: Function name
+  - key: Methods
+    value: Method name
+---
+
+{% for command in page.commands %}
+  <a href="{{ command.url }}" role="option"><strong>{{ command.key }}</strong>: {{ command.value }}</a>
+{% endfor %}
+<div class="overlay"></div>

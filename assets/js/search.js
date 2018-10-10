@@ -1,11 +1,15 @@
-function ready() {
-  const searchInput = document.querySelector('.js-search-input');
-  const commandPallet = document.querySelector('.js-command-pallet');
-  const commands = []
+const input = document.querySelector('.js-search-input')
+const completer = document.querySelector('auto-complete')
+const container = document.querySelector('#command-pallet')
+let results = null
 
-  searchInput.onfocus = () => {
-    commandPallet.classList.toggle('active');
-  }  
-}
-
-document.addEventListener('DOMContentLoaded', ready);
+completer.addEventListener('load', function(event) {
+  if (!results) results = container.cloneNode(true)
+  
+  const cloned = results.cloneNode(true)
+  for (const item of cloned.querySelectorAll('a')) {
+    const disabled = !item.textContent.toLowerCase().match(input.value.toLowerCase())
+    if (disabled) item.remove()
+  }
+  container.innerHTML = cloned.innerHTML
+})

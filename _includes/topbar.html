@@ -1,8 +1,8 @@
 <div class="topbar d-flex">
-  <div class="search flex-auto">
+  <auto-complete src="/command-pallet" class="search flex-auto" aria-owns="command-pallet">
     <input type="text" name="fname" placeholder="Search, jump to, or run a command..." class="search-input js-search-input">
-    <div class="command-pallet js-command-pallet"></div>
-  </div>
+    <div class="command-pallet" id="command-pallet"></div>
+  </auto-complete>
   <div class="user">
     <img src="assets/img/avatar.png" width="28px">
   </div>
