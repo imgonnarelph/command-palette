@@ -88,6 +88,23 @@ html, body {
 
   .search {
     border-right: 1px solid #000;
+    position: relative;
+  }
+
+  .command-pallet {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: scroll;
+    height: 300px;
+    background: #363A3D;
+    border: 1px solid #000;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+
+    &.active {
+      display: block;
+    }
   }
 
   .search-input {
@@ -107,7 +124,7 @@ html, body {
 
     &:focus {
       outline: none;
-      background: lighten($color: #16181A, $amount: 5%)
+      background: #363A3D;
     }
   }
 
