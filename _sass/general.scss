@@ -1,6 +1,7 @@
 html, body {
   font-family: $base-font-family;
   background: $background-color;
+  color: $white-color;
   margin: 0;
   height: 100%;
 }
@@ -86,6 +87,10 @@ html, body {
     font-family: 'Space Mono', monospace;
     box-sizing: border-box;
 
+    &:hover {
+      cursor: pointer;
+    }
+
     &:focus {
       outline: none;
       background: lighten($color: #16181A, $amount: 5%)
@@ -97,4 +102,10 @@ html, body {
     display: flex;
     align-items: center;
   }
+}
+
+.page-header {
+  font-size: 21px;
+  padding-top: 30px;
+  padding-left: 30px;
 }
