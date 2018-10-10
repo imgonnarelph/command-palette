@@ -72,6 +72,6 @@ commands:
 ---
 
 {% for command in page.commands %}
-  <a href="{{ command.url }}" role="option"><strong>{{ command.key }}</strong>: {{ command.value }}</a>
+  <div class="d-flex"><a href="{{ command.url }}" role="option"><span class="command-qualifier">{{ command.key }}:</span> <span class="command-value">{{ command.value }}</span></a></div>
 {% endfor %}
 <div class="overlay"></div>

@@ -84,7 +84,7 @@ html, body {
 
 auto-complete[open]:before {
   content: ' ';
-  background: red;
+  background: rgba(0, 0, 0, 0.65);
   position: fixed;
   top: 0;
   left: 0;
@@ -105,18 +105,34 @@ auto-complete[open]:before {
     position: absolute;
     width: 100%;
     overflow: scroll;
-    height: 300px;
+    max-height: 350px;
     background: #363A3D;
-    border: 1px solid #000;
     border-bottom-left-radius: 6px;
     border-bottom-right-radius: 6px;
+    border-top: 1px solid #000;
+
+    .command-qualifier {
+      color: #B4BCC2;
+    }
+
+    .command-value {
+      font-weight: 500;
+    }
    
     [aria-selected=true] {
-      color: red;
+      .command-qualifier {
+        color: black;
+      }
+  
+      .command-value {
+        color: #000
+      }
     }
 
     a {
-      color: gray;
+      text-decoration: none;
+      color: white;
+      padding: 10px 0px 0px 30px;
     }
   }
 
@@ -134,6 +150,7 @@ auto-complete[open]:before {
 
     &:focus + .command-pallet {
       display: block;
+      flex-direction: column;
     }
 
     &:hover {

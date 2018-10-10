@@ -344,10 +344,6 @@
         var _this2 = this;
 
         var query = this.input.value.trim();
-        if (!query) {
-          this.container.open = false;
-          return;
-        }
 
         var src = this.container.src;
         if (!src) return;
