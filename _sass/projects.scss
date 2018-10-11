@@ -1,11 +1,15 @@
 .projects {
   .projects-pinned {
-    margin-left: 30px;
+    margin: 0 30px;
+    justify-content: space-between;
+    flex-wrap: wrap;
     
     .projects-pinned-item {
-      width: 300px;
       height: 150px;
       border: 1px solid #222629;
+      width: 32%;
+      margin-bottom: 30px;
+      border-radius: 3px;
     }
   }
 }

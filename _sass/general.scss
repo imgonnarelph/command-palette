@@ -6,6 +6,10 @@ html, body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+}
+
 .sidebar {
   background: #16181A;
   border-right: 1px solid #000;
@@ -117,6 +121,7 @@ auto-complete[open]:before {
 
     .command-value {
       font-weight: 500;
+      margin-left: 5px;
     }
    
     [aria-selected=true] {
@@ -129,11 +134,45 @@ auto-complete[open]:before {
       }
     }
 
-    a {
+    .commands-list-item {
+      align-items: center;
+      padding: 10px 0px 10px 30px;
       text-decoration: none;
       color: white;
-      padding: 10px 0px 0px 30px;
       display: block;
+
+      img {
+        margin-right: 10px;
+      }
+
+      &:hover {
+        background: #0366D6;
+      }
+    }
+
+    .command-pallet-activity {
+      border-bottom: 1px solid #292D30;
+      padding: 20px 30px;
+      align-items: center;
+      display: flex;
+
+      &:hover {
+        background: #0366D6;
+      }
+
+      .activity-type {
+        margin-right: 20px;
+      }
+
+      .activity-title {
+        font-size: 16px;
+        color: white;
+      }
+
+      .activity-meta {
+        font-size: 12px;
+        color: #92989D;
+      }
     }
   }
 
