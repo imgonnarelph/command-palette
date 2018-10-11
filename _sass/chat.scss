@@ -1,10 +1,10 @@
-.pull-requests {
+.chat {
   height:100%;
   display:flex;
   flex-direction: row;
   align-content: stretch;
 
-  .pull-requests-sidebar {
+  .chat-list {
     border-top: 1px solid #222629;
     border-right: 1px solid #222629;
     width: 280px;
@@ -12,16 +12,17 @@
     background: #2A3036;
   }
 
-  .pull-requests-list {
+  .chat-messages {
     border-top: 1px solid #222629;
+    border-right: 1px solid #222629;
     position:relative;
     height:100%; 
     overflow-y:auto;
-    background: #2A3036;
   }
 
-  .pull-requests-list-item {
-    padding: 30px;
-    border-bottom: 1px solid #222629;
+  .chat-profile {
+    border-top: 1px solid #222629;
+    width: 280px;
+    background: #2A3036;
   }
 }
