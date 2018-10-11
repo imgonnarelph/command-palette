@@ -4,6 +4,7 @@
 commands:
   - key: Activity
     value: Recent
+    url: '#recent-activity'
   - key: Issues
     value: Create new
   - key: Issues
@@ -72,7 +73,12 @@ commands:
     value: Method name
 ---
 
+<div class="js-commands">
 {% for command in page.commands %}
-  <div class="d-flex"><a href="{{ command.url }}" role="option"><span class="command-qualifier">{{ command.key }}:</span> <span class="command-value">{{ command.value }}</span></a></div>
+  <div class=""><a href="{{ command.url }}" role="option"><span class="command-qualifier">{{ command.key }}:</span> <span class="command-value">{{ command.value }}</span></a></div>
 {% endfor %}
+</div>
+
 <div class="overlay"></div>
+
+<div class="js-recent-activity" hidden>hi</div>

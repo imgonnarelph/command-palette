@@ -13,3 +13,18 @@ completer.addEventListener('load', function(event) {
   }
   container.innerHTML = cloned.innerHTML
 })
+
+document.addEventListener('click', function(event) {
+  const target = event.target
+  if (target.hash === '#recent-activity') {
+    console.log('I tried to stop it')
+    // input.focus()
+    event.preventDefault()
+    event.stopImmediatePropagation()
+    setTimeout(function() {
+      target.closest('auto-complete').open = true
+    }, 0)
+    document.querySelector('.js-commands').hidden = true
+    document.querySelector('.js-recent-activity').hidden = false
+  }
+}, true)
