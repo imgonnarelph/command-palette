@@ -115,31 +115,14 @@ auto-complete[open]:before {
     border-bottom-right-radius: 6px;
     border-top: 1px solid #000;
 
-    .command-qualifier {
-      color: #B4BCC2;
-    }
-
-    .command-value {
-      font-weight: 500;
-      margin-left: 5px;
-    }
-   
-    [aria-selected=true] {
-      .command-qualifier {
-        color: black;
-      }
-  
-      .command-value {
-        color: #000
-      }
-    }
-
     .commands-list-item {
       align-items: center;
-      padding: 10px 0px 10px 30px;
+      padding: 10px 0px 10px 15px;
       text-decoration: none;
       color: white;
-      display: block;
+      display: flex;
+      border-radius: 4px;
+      margin: 0px 15px;
 
       img {
         margin-right: 10px;
@@ -147,6 +130,25 @@ auto-complete[open]:before {
 
       &:hover {
         background: #0366D6;
+      }
+
+      .command-qualifier {
+        color: #B4BCC2;
+        margin-right: 4px;
+      }
+  
+      .command-value {
+        font-weight: 500;
+      }
+    }
+
+    [aria-selected=true] {
+      .command-qualifier {
+        color: black;
+      }
+  
+      .command-value {
+        color: #000
       }
     }
 

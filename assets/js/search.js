@@ -27,4 +27,16 @@ document.addEventListener('click', function(event) {
     document.querySelector('.js-commands').hidden = true
     document.querySelector('.js-recent-activity').hidden = false
   }
+
+  if (target.hash === '#action') {
+    console.log('I tried to stop it')
+    // input.focus()
+    event.preventDefault()
+    event.stopImmediatePropagation()
+    setTimeout(function() {
+      target.closest('auto-complete').open = true
+    }, 0)
+    document.querySelector('.js-commands').hidden = true
+    document.querySelector('.js-command-action').hidden = false
+  }
 }, true)
