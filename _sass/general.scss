@@ -50,6 +50,18 @@ a {
       }
     }
 
+    &.sentry {
+      background: #E03E2F;
+    }
+
+    &.travis {
+      background: #E4F8F8;
+    }
+
+    &.jira {
+      background: #fff;
+    }
+
     .nav-icon path {
       stroke: #798692;
     }
